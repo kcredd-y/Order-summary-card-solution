@@ -1,0 +1,193 @@
+:root {
+  --clr-text-primary: hsl(225, 100%, 94%);
+  --clr-text-secondory: hsl(245, 75%, 52%);
+
+  --clr-bg: hsl(225, 100%, 98%);
+  --clr-bs: hsl(224, 23%, 55%);
+  --clr-bs2: hsl(223, 47%, 23%);
+
+  --fw--light: 500;
+  --fw--regular: 700;
+  --fw--bold: 900;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: var(--fw--light);
+  color: var(--clr-text-primary);
+  background: url(./images/pattern-background-mobile.svg) no-repeat;
+  background-color: var(--clr-text-primary);
+
+  display: flex;
+  flex-flow: column wrap;
+  place-content: center;
+  min-height: 100vh;
+}
+
+@media (min-width: 600px) {
+  body {
+    background: url(./images/pattern-background-desktop.svg) repeat-x;
+  }
+}
+
+.container {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem;
+  background-color: var(--clr-bg);
+  color: var(--clr-bs);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  max-width: 400px;
+}
+
+
+.product_image {
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+}
+h1 {
+  color: initial;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  font-weight: var(--fw--bold);
+}
+
+.product__slogon {
+  padding: 0 2rem 0 2rem;
+  font-size: 1rem;
+}
+
+.flex-group {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+.product_price div:first-child {
+  color: black;
+  font-weight: var(--fw--regular);
+  font-size: 0.8rem;
+}
+
+.product_price div:last-child {
+  font-size: 0.8rem;
+}
+
+.plan-change {
+  text-decoration: underline;
+  color: #8379ec;
+}
+
+.plan-change:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #8533ff;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: block;
+  width: 85%;
+  height: 3rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+.flex-group1 {
+  margin-top: 1rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn__payment {
+  background-color: var(--clr-text-secondory);
+  color: white;
+  font-weight: var(--fw--regular);
+  box-shadow: rgba(81, 81, 243, 0.25) 0px 20px 27px -5px,
+    rgba(144, 144, 218, 0.3) 0px 8px 16px -8px;
+}
+
+.btn__payment:hover {
+  background-color: #8533ff;
+}
+.btn__cancel {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--clr-bg);
+  font-weight: var(--fw--regular);
+  color: var(--clr-bs);
+}
+.btn__cancel:hover {
+  color: black;
+}
